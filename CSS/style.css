@@ -1,5 +1,5 @@
 
-
+@import url('https://fonts.googleapis.com/css?family=Vollkorn:700i&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -20,7 +20,8 @@ aside{
     flex-direction: row;
     justify-content: space-between;
 }
-aside > ul:first-child, aside > ul:last-child{
+aside > ul:first-child, 
+aside > ul:last-child{
     margin-right: 80px;
     margin-left: 80px;
 }
@@ -38,6 +39,9 @@ aside > ul:first-child li{
 aside > ul:first-child > li > a > i{
     color: white;
 }
+aside > ul:first-child > li > a{
+   
+}
 
 /* Segundo hijo */
 aside > ul:last-child{
@@ -50,11 +54,18 @@ aside > ul:last-child li{
 }
 aside > ul:last-child > li > a{
     color: white;
+    font-family: 'Vollkorn', serif;
 }
 
+/* Cabecera de la pagina */
 header{
-    background: blanchedalmond;
+    background-image: url("../Img/Excusas2.jpg");
+    height: 100vh;
 }
+
+
+
+
 
 /* Section conoce MAIN */
 
