@@ -4,12 +4,54 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* margin-left: 80px;
+    margin-right: 80px; */
+}
+aside a, aside li{
+    list-style: none;
+    text-decoration: none;
 }
 
+/* Redes sociales e idioma */
 aside{
     background: orange;
     height:5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+aside > ul:first-child, aside > ul:last-child{
+    margin-right: 80px;
+    margin-left: 80px;
+}
+
+/* Primer hijo */
+aside > ul:first-child{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style:none;
+}
+aside > ul:first-child li{
+    padding: 5px;
+}
+aside > ul:first-child > li > a > i{
+    color: white;
+}
+
+/* Segundo hijo */
+aside > ul:last-child{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+aside > ul:last-child li{
+    padding: 5px;
+}
+aside > ul:last-child > li > a{
+    color: white;
+}
+
 header{
     background: blanchedalmond;
 }
