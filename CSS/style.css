@@ -71,18 +71,54 @@ aside > ul:last-child > li > a{
     color: white;
     font-family: 'Volkorn 700 Italic', serif;
     font-size: 18px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
 
 /* Cabecera de la pagina */
 header{
-    background-image: url("../Img/foto.jpg");
+    background-image: url("../Img/foto.jpg"), url("../Img/foto2.jpg"), url("../Img/foto.jpg");
+    background-position: 0vw 0vh, 100vw 0vh, 100vw 0vh;
     background-repeat: no-repeat;
     background-size: cover;
+    animation: anim 10s linear infinite;
     height: 100vh;
     padding-top: 5vh;
     z-index: -1;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
     clip-path: polygon(0 0, 100% 0, 99.9% 85%, 50% 99.9%, 0 85%);
+}
+.selector{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    height: 220px;
+}
+.selector > span{
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    border: 1px solid #fff;
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+}
+.selector > span:nth-last-of-type(2){animation: sel 10s linear infinite}
+.selector > span:nth-last-of-type(1){animation: sel 10s linear 5s infinite}
+@keyframes anim{
+    from{background-position: 0vw 0vh, 100vw 0vh, 100vw 0vh}
+    40%{background-position: 0vw 0vh, 100vw 0vh, 100vw 0vh}
+
+    60%{background-position: -100vw 0vh, 0vw 0vh, 100vw 0vh}
+    80%{background-position: -100vw 0vh, 0vw 0vh, 100vw 0vh}
+
+    to{background-position: -100vw 0vh, -100vw 0vh, 0vw 0vh}
+}
+@keyframes sel{
+    from{background-color: rgba(255, 255, 255, 1);}
+    40%{background-color: rgba(255, 255, 255, 1);}
+
+    50%{background-color: rgba(255, 255, 255, 0);}
+    to{background-color: rgba(255, 255, 255, 0);}
 }
 
 header > nav > h1{
@@ -118,6 +154,7 @@ nav > h1 > a > img{
 }
 .menu > li {
     font-family: 'Volkorn 700 Italic', serif;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
     text-transform: uppercase;
     font-size: 24px;
     padding:8px 12px;
@@ -140,6 +177,7 @@ nav > h1 > a > img{
 }
 .carrusel > #firstExp > h1{
     font-family: 'Volkorn 900 Italic';
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
     font-size: 90px;
     text-transform: uppercase;
     width: 1000px;
@@ -166,24 +204,89 @@ nav > h1 > a > img{
 }
 #app21{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
-    height: 90px;
+    align-items: center;
+    height: auto;
+    margin-top: 20px;
 }
 #app21 > h1{
-    font-family: 'Volkorn Semi-Bold';
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Volkorn 700 Italic';
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
     font-size: 24px;
     color: black;
     background-color: #f7931e;
     padding:10px;
     border-radius: 5px;
 }
+#app21 > h1 > span::before {
+    content: "\A";
+    white-space: pre;
+}
 
 #app21 > h1 > span > a{
     color: white;
 }
 
+/* Flechas */
+
+.elemento {
+    display: flex;
+    justify-content: center;
+    height: 10px;
+}
+.animatedColor {
+    color: white;
+}
+   
+  .flecha {
+     animation: arrow 1s ease-in-out infinite;
+     font-size:20px !important;
+       
+  }
+   
+  .flecha:hover{
+    animation:arrow 1s ease-out infinite !important;
+    color:#f7931e !important;
+    }
+    .flecha2 {
+        animation: arrow2 1s ease-in-out infinite;
+        font-size:20px !important;
+          
+     }
+      
+     .flecha2:hover{
+       animation:arrow2 1s ease-out infinite !important;
+       color:#f7931e !important;
+       }
+@keyframes arrow {
+    0% {
+      transform: translate(0px, 50px);
+    }
+   
+     50% {
+      transform: translate(0px, 60px);
+    }
+    
+    100% {
+      transform: translate(0px, 50px);
+    }
+}
+@keyframes arrow2 {
+    0% {
+      transform: translate(0px, 50px);
+    }
+   
+     40% {
+      transform: translate(0px, 60px);
+    }
+    
+    100% {
+      transform: translate(0px, 50px);
+    }
+}
 
 
 /* Section conoce MAIN */
