@@ -7,14 +7,19 @@
     /* margin-left: 80px;
     margin-right: 80px; */
 }
-aside a, aside li{
+a, li{
     list-style: none;
     text-decoration: none;
+}
+h1{
+    margin: 0;
 }
 
 /* Redes sociales e idioma */
 aside{
-    background: orange;
+    position: absolute;
+    width: 100%;
+    background: #f6a219;
     height:5vh;
     display: flex;
     flex-direction: row;
@@ -39,10 +44,6 @@ aside > ul:first-child li{
 aside > ul:first-child > li > a > i{
     color: white;
 }
-aside > ul:first-child > li > a{
-   
-}
-
 /* Segundo hijo */
 aside > ul:last-child{
     display: flex;
@@ -55,12 +56,48 @@ aside > ul:last-child li{
 aside > ul:last-child > li > a{
     color: white;
     font-family: 'Vollkorn', serif;
+    font-size: 18px;
 }
 
 /* Cabecera de la pagina */
 header{
-    background-image: url("../Img/Excusas2.jpg");
+    background-image: url("../Img/foto.jpg");
     height: 100vh;
+    padding-top: 5vh;
+}
+header > nav > h1{
+    margin-left: 85px;
+    text-align: center;
+}
+header > nav > .menu{
+    margin-right: 73px;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.menu {
+    display: flex;
+    flex-direction: row ;
+}
+.menu > li {
+    font-family: 'Vollkorn', serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    padding:8px 12px;
+}
+.menu > li > a{
+    color: white;
+}
+.menu > li:first-child{
+    border-radius: 3px;
+    background-color: #f7931e;
+}
+.submenu{
+    display: none;
 }
 
 
