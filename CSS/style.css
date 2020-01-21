@@ -148,6 +148,8 @@ nav > h1 > a > img{
     width: 180px ;
     height: 100px;
 }
+
+
 .menu {
     display: flex;
     flex-direction: row ;
@@ -161,7 +163,36 @@ nav > h1 > a > img{
 }
 .menu > li > a{
     color: white;
+    -webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;
 }
+.menu > li > a::before{
+    position: relative;
+	top: 55%;
+	left: 50%;
+	color: transparent;
+	content: '•';
+	text-shadow: 0 0 transparent;
+	font-size: 1.6em;
+	-webkit-transition: text-shadow 0.3s, color 0.3s;
+	-moz-transition: text-shadow 0.3s, color 0.3s;
+	transition: text-shadow 0.3s, color 0.3s;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	transform: translateX(-10%);
+	pointer-events: none;
+}
+.menu > li > a:hover::before,
+.menu > li > a:focus::before{
+    color: #fff;
+	text-shadow: 10px 0 #fff, -10px 0 #fff;
+}
+.menu > li > a:hover,
+.menu > li > a:focus{
+    color: #ba7700;
+}
+
 .menu > li:first-child{
     border-radius: 3px;
     background-color: #f7931e;
@@ -279,7 +310,7 @@ nav > h1 > a > img{
       transform: translate(0px, 50px);
     }
    
-     40% {
+    55% {
       transform: translate(0px, 60px);
     }
     
@@ -287,6 +318,7 @@ nav > h1 > a > img{
       transform: translate(0px, 50px);
     }
 }
+
 
 
 /* Section conoce MAIN */
