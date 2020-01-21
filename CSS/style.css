@@ -126,7 +126,7 @@ header > nav > h1{
     text-align: center;
 }
 header > nav > .menu{
-    margin-right: 293px;
+    margin-right: 293px; /*293*/
 }
 .borde{
     position: absolute;
@@ -158,23 +158,32 @@ nav > h1 > a > img{
     font-family: 'Volkorn 700 Italic', serif;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: 22px;
     padding:8px 12px;
 }
 .menu > li > a{
     color: white;
+}
+.menu > li:first-child:hover,
+.menu > li:first-child:focus {
+    background-color: rgb(255, 60, 0);
+}
+.menu > li:nth-child(1n+2) > a{
     -webkit-transition: color 0.3s;
 	-moz-transition: color 0.3s;
 	transition: color 0.3s;
 }
-.menu > li > a::before{
+.menu > li:nth-child(2) > a::before,
+.menu > li:nth-child(3) > a::before,
+.menu > li:nth-child(4) > a::before,
+.menu > li:nth-child(5) > a::before{
     position: relative;
 	top: 55%;
 	left: 50%;
 	color: transparent;
-	content: '•';
-	text-shadow: 0 0 transparent;
-	font-size: 1.6em;
+    content: '•';
+    font-size: 1em;
+	text-shadow: 0 0 transparent;   
 	-webkit-transition: text-shadow 0.3s, color 0.3s;
 	-moz-transition: text-shadow 0.3s, color 0.3s;
 	transition: text-shadow 0.3s, color 0.3s;
@@ -183,23 +192,113 @@ nav > h1 > a > img{
 	transform: translateX(-10%);
 	pointer-events: none;
 }
+
 .menu > li > a:hover::before,
 .menu > li > a:focus::before{
-    color: #fff;
-	text-shadow: 10px 0 #fff, -10px 0 #fff;
+    color: #f6a219;
+	text-shadow: 10px 0 #f6a219, -10px 0 #f6a219;
 }
-.menu > li > a:hover,
-.menu > li > a:focus{
-    color: #ba7700;
-}
+.menu > li:nth-child(2) > a:hover,
+.menu > li:nth-child(3) > a:hover,
+.menu > li:nth-child(4) > a:hover,
+.menu > li:nth-child(5) > a:hover,
+.menu > li:nth-child(2) > a:focus,
+.menu > li:nth-child(3) > a:focus,
+.menu > li:nth-child(4) > a:focus,
+.menu > li:nth-child(5) > a:focus{
+    color: #f6a219;
+}  
 
 .menu > li:first-child{
-    border-radius: 3px;
+    border-radius: 4px;
     background-color: #f7931e;
 }
-.submenu{
-    display: none;
+/* Menu deplegable */
+.menu > li:last-child{
+    display: block;
 }
+.menu > li:last-child > a{
+    display: block;
+    position: relative;
+    line-height: 30px;
+    margin-top: -4px;
+    background-color: #f7931e;
+    width: 30px;
+    height: 30px;
+    border: 0px;
+    border-radius: 50%;
+    transition: all 0.3s ease 0s;
+}
+.menu > li:last-child > a:hover{
+    transform: rotate(-90deg);
+}
+.icon-bar:first-child{
+    left: 5px;
+}
+.icon-bar:nth-child(2){
+    left: 50%;
+    margin-left: -2px;
+}
+.icon-bar:nth-child(3){
+    right: 5px;
+}
+.icon-bar{
+    width: 4px;
+    height: 4px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    margin-top: -2px;
+    display: block;
+}
+.submenu{
+    text-align: center;
+    width: 250px;
+    margin-top: 20px;
+    right: 305px;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+    
+}
+.submenu > li:first-child,
+.submenu > li:nth-child(2),
+.submenu > li:nth-child(3),
+.submenu > li:nth-child(4){
+    border-bottom: 1px solid rgb(255, 150, 0);
+}
+.submenu > li:first-child{
+    border-radius: 5px 5px 0px 0px;
+}
+
+.submenu > li:last-child{
+    border-radius: 0px 0px 5px 5px;
+}
+.submenu > li{
+    background-color: #f6a219;
+    padding: 10px;
+    
+}
+.submenu > li > a{
+    color: white;
+}
+
+.submenu > li:hover,
+.submenu > li:focus {
+    background-color: rgb(255, 60, 0);
+}
+
+.displayver{
+    opacity: 1;
+    visibility: visible;
+}
+.displaynover{
+    opacity: 0;
+    visibility: hidden;
+}
+
 
 /* Carrusel  */
 
@@ -255,6 +354,10 @@ nav > h1 > a > img{
 #app21 > h1 > span::before {
     content: "\A";
     white-space: pre;
+}
+#app21 > h1:hover,
+#app21 > h1:focus{
+    background-color: rgb(255, 60, 0);
 }
 
 #app21 > h1 > span > a{
