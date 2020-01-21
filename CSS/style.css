@@ -134,7 +134,7 @@ header > nav > .menu{
     height: 100vh;
     width: 100%;
     clip-path: polygon(50% 98%, 99.9% 83%, 99.9% 84%, 50% 99%, 0 84%, 0 83%);
-    background-color: orange;
+    background-color: #f7931e;
     z-index: 1;
 }
 nav{
