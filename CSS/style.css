@@ -44,8 +44,8 @@ aside{
 }
 aside > ul:first-child, 
 aside > ul:last-child{
-    margin-right: 300px;
-    margin-left: 300px;
+    margin-right: 225px;
+    margin-left: 225px;
 }
 
 /* Primer hijo */
@@ -126,11 +126,11 @@ header{
 }
 
 header > nav > h1{
-    margin-left: 305px;
+    margin-left: 230px;
     text-align: center;
 }
 header > nav > .menu{
-    margin-right: 293px; /*293*/
+    margin-right: 218px; /*293*/
 }
 .borde{
     position: absolute;
@@ -264,7 +264,7 @@ nav > h1 > a > img{
     text-align: center;
     width: 250px;
     margin-top: 20px;
-    right: 305px;
+    right: 230px;
     position: absolute;
     visibility: hidden;
     opacity: 0;
@@ -436,15 +436,15 @@ nav > h1 > a > img{
 /* Section conoce MAIN */
 
 .conoce {
-    margin-left: 300px;
-    margin-right: 300px;
+    margin-left: 225px;
+    margin-right: 225px;
     background: #f2f2f2;
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: repeat(2, 1fr) 2fr;
     grid-column-gap: 50px;
-    grid-row-gap: 0px;
+    grid-row-gap: 200px;
     text-align: center;
 }
 .conoce > h1{
@@ -471,8 +471,8 @@ nav > h1 > a > img{
     width: 100px;
     height:  5px;
     display: block;
-    
 }
+
 
 .conoce > h1 > span::before{
     content: '\A'; 
@@ -490,10 +490,50 @@ nav > h1 > a > img{
 
 /* Articulos (conoce) */
 
-.conoce > article >  a{
-    display: inline-block;
-    padding: 80px 35px;
-    background: #ffffff;
+.conoce > article{
+    position: relative;
+    padding: 30px;
+    background-color: rgba(255, 255, 255,0.5);
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid rgba(221, 221, 221, 0.5);
+    /* box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1); */
+}
+.conoce > article a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 150px;
+}
+.conoce > article a span{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    line-height: 70px;
+    top:0;
+    left: 50%;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #191919 0%, #434345 100%);
+    background: -moz-linear-gradient(45deg, #191919 0%, #434345 100%);
+    transform: translate(-50%, -50%);
+}
+.conoce > article a span i{
+    font-size: 38px;
+    color: white;
+}
+.conoce article h1{
+    color: #f7931e;
+    font-family: 'Volkorn 900 Italic';
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.conoce article p{
+    color: black;
+    font-family: 'Volkorn Semi-Bold';
 }
 
 .blog{
@@ -509,7 +549,9 @@ nav > h1 > a > img{
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     background-color: darkgoldenrod;
-    margin-bottom: 150px;
+}
+.galeria > a{
+    height: 480px;
 }
 .galeria img{
     width: 100%;
@@ -522,7 +564,31 @@ nav > h1 > a > img{
       object-position: center center;
     }
 }
-
+.galeria > h1{
+    background: -webkit-linear-gradient(to right, #833ab4, #fd1d1d, #fcb045); 
+    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045); 
+    display: flex;
+    font-family: 'Volkorn 900 Italic';
+    font-size: 42px;
+    text-transform: uppercase;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    line-height: 1.6em;
+    letter-spacing: 0.1em;
+}
+.galeria > h1 > a{
+    color: white;
+}
+.subir::before{
+    content: '\A';
+    white-space: pre;
+}
+.gra{
+    font-size: 55px;
+}
 .galeria > a:nth-child(1){
     grid-area: 1 / 1 / 2 / 2;
 }
@@ -545,27 +611,67 @@ nav > h1 > a > img{
     grid-area: 2 / 3 / 3 / 5;
 }
 
+/* Footer  */
 footer{
     display: grid;
-    height: 60vh;
+    height: 40vh;
+    padding: 20px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     background-color: #191919;
+    font-family: 'Volkorn Semi-Bold';
 }
 footer > h1{
     grid-area: 1 / 1 / 2 / 2;
+    margin-left: 205px;
+}
+footer > h1 > img{
+    margin-top: 30px;
+    width: 180px ;
+    height: 100px;
 }
 footer > div:nth-child(2){
+    margin-top: 30px;
     grid-area: 1 / 2 / 2 / 3;
+    color: white;
+}
+footer > div:nth-child(2) > p{
+    margin-top: 20px;
 }
 footer > div:nth-child(3){
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     grid-area: 1 / 3 / 3 / 4;
+    margin-right: 205px;
+    color: white;
+}
+.separacion{
+    margin-top: 20px;
+}
+.saltar::before{
+    content: '\A';
+    white-space: pre;
 }
 footer > div:nth-child(4){
     grid-area: 2 / 1 / 3 / 2;
+    margin-left: 205px;
+}
+footer > div:nth-child(4) > ul > li > a{
+    color: #686868;
+}
+footer > div:nth-child(4) > ul > li > a:hover,
+footer > div:nth-child(4) > ul > li > a:focus{
+    color: yellow;
 }
 footer > p{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     grid-area: 2 / 2 / 3 / 3;
+    text-align: center;
+    color: white;
 }
