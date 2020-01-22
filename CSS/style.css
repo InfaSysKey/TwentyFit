@@ -27,6 +27,9 @@ a, li{
 h1{
     margin: 0;
 }
+body{
+    background-color: #f2f2f2;
+}
 
 /* Redes sociales e idioma */
 aside{
@@ -76,6 +79,7 @@ aside > ul:last-child > li > a{
 
 /* Cabecera de la pagina */
 header{
+    background-color: #f2f2f2;
     background-image: url("../Img/foto.jpg"), url("../Img/foto2.jpg"), url("../Img/foto.jpg");
     background-position: 0vw 0vh, 100vw 0vh, 100vw 0vh;
     background-repeat: no-repeat;
@@ -229,6 +233,10 @@ nav > h1 > a > img{
     border-radius: 50%;
     transition: all 0.3s ease 0s;
 }
+.menu > li:last-child:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
 .menu > li:last-child > a:hover{
     transform: rotate(-90deg);
 }
@@ -281,6 +289,7 @@ nav > h1 > a > img{
     padding: 10px;
     
 }
+
 .submenu > li > a{
     color: white;
 }
@@ -426,10 +435,74 @@ nav > h1 > a > img{
 
 /* Section conoce MAIN */
 
-.conoce{
-    background: brown;
+.conoce {
+    padding-left: 300px;
+    padding-right: 300px;
+    background: #f2f2f2;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 0px;
+    text-align: center;
+}
+.conoce > h1{
+    font-family: 'Volkorn 900 Italic';
+    font-size: 45px;
+    margin-top: 90px;
+    text-align: center;
+    grid-area: 1 / 1 / 2 / 4;
+}
+.conoce > h1 > span{
+    text-transform: uppercase;
+}
+.conoce > h1 > span::before{
+    content: '\A';
+    white-space: pre;
+    
+}
+.linea{
+    border-radius: 10px;
+    margin-top: 25px;
+    background-color: #f7931e;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height:  5px;
+    display: block;
+    
+}
+
+.conoce > h1 > span::before{
+    content: '\A'; 
+    white-space: pre-wrap;
+}
+.conoce > article:nth-child(2){
+    grid-area: 2 / 1 / 3 / 2;
+}
+.conoce > article:nth-child(3){
+    grid-area: 2 / 2 / 3 / 3;
+}
+.conoce > article:nth-child(4){
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+/* Articulos (conoce) */
+
+.conoce > article >  a{
+    display: inline-block;
+    padding: 80px 35px;
+    background: #ffffff;
 }
 
 .blog{
-    background: burlywood;
+    height: 100vh;
+    background-color: cadetblue;
+
+    
+}
+.galeria{
+    height: 100vh;
+    background-color: darkgoldenrod;
 }
