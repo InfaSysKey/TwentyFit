@@ -635,6 +635,7 @@ nav > h1 > a > img{
     float: right;
     margin-top: -40px;
     width: 90%;
+    line-height: 1.5em;
     padding: 1.6em;
 }
 #a001 > div:hover,
@@ -657,9 +658,9 @@ nav > h1 > a > img{
     font-size: 18px;
     color: #0071bc;
 }
-#a001 > div a:hover,
-#a002 > div a:hover,
-#a003 > div a:hover{
+#a001 > div:hover a,
+#a002 > div:hover a,
+#a003 > div:hover a{
     color: #f7931e;
 }
 #a001 > div a,
