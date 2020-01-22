@@ -7,12 +7,55 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/normalize.css">
-    <script src="https://kit.fontawesome.com/bd98a99333.js" crossorigin="anonymous"></script>
     <title>Twentyfit</title>
 </head>
 
 <body>
+    <div class="cargador"></div>
+    <!-- <style>
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: 1s all;
+            opacity: 0;
+        }
 
+        .loading.show {
+            opacity: 1;
+        }
+
+        .loading .spin {
+            border: 3px solid hsla(185, 100%, 62%, 0.2);
+            border-top-color: #3cefff;
+            border-radius: 50%;
+            width: 3em;
+            height: 3em;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <div class="loading show">
+        <div class="spin"></div>
+    </div>
+    <script>
+        // Loading
+        var Loading = (loadingDelayHidden = 0) => { let loading = null; const myLoadingDelayHidden = loadingDelayHidden; let imgs = []; let lenImgs = 0; let counterImgsLoading = 0; function incrementCounterImgs() { counterImgsLoading += 1; if (counterImgsLoading === lenImgs) { hideLoading() } } function hideLoading() { if (loading !== null) { loading.classList.remove('show'); setTimeout(function () { loading.remove() }, myLoadingDelayHidden) } } function init() { document.addEventListener('DOMContentLoaded', function () { loading = document.querySelector('.loading'); imgs = Array.from(document.images); lenImgs = imgs.length; if (imgs.length === 0) { hideLoading() } else { imgs.forEach(function (img) { img.addEventListener('load', incrementCounterImgs, false) }) } }) } return { 'init': init } }
+
+        Loading(5000).init();
+    </script> -->
     <aside class="redes">
         <ul class="rrss">
             <li><a href="">Facebook<i class="fab fa-facebook-f"></i></a></li>
@@ -181,7 +224,9 @@
 
         <p>Copyright &copy; 2019. Todos los derechos reservados | <cite>InfaSysKey</cite></p>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script src="JS/script.js"></script>
+    
 </body>
 
 </html>

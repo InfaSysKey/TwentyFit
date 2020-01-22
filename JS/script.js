@@ -1,3 +1,8 @@
+//Load pagina
+$(window).load(function() {
+    $(".cargador").fadeOut("slow");
+});
+
  let textoClaseUl = document.querySelectorAll("aside > ul:first-child > li > a");
  let vacio = "";
 //  console.log(textoClaseUl);
