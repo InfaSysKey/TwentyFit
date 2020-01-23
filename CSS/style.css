@@ -81,7 +81,7 @@ aside > ul:last-child > li > a{
 header{
     background-color: #f2f2f2;
     background-image: url("../Img/foto.jpg"), url("../Img/foto2.jpg"), url("../Img/foto.jpg");
-    background-position: 0vw 0vh, 100vw 0vh, 100vw 0vh;
+    /* background-position: 0vw 0vh, 100vw 0vh, 100vw 0vh; */
     background-repeat: no-repeat;
     background-size: cover;
     animation: anim 10s linear infinite;

@@ -17,4 +17,6 @@ let textoH1 = document.querySelectorAll("header > nav > h1 > a")[0];
 
 textoH1.firstChild.textContent = "";
  
+//Codigo para añadir cosas
+console.log("hOLA");
 
