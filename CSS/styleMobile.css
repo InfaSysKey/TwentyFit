@@ -2,11 +2,11 @@
 /* Primera logitud de responsive */
 @media(max-width:1470px){
     .menu > li a{
-        font-size: 18px;
+        font-size: 15px;
     }
     nav > h1 > a > img{
-        width: 140px ;
-        height: 80px;
+        width: 130px ;
+        height: 70px;
     }
     .carrusel > #firstExp > h1{
         font-size: 60px;
@@ -71,7 +71,7 @@
     }
     
 }
-@media(max-width:1030px){
+@media(max-width:1235px){
     .conoce{
         height: 100vh;
         display: grid;
@@ -82,7 +82,7 @@
         margin-left: auto;
         margin-right: auto;
         padding: 40px;
-        margin-bottom: 550px;
+        margin-bottom: 400px;
     }
     .conoce > h1{
         grid-area: 1 / 1 / 2 / 2;
@@ -96,8 +96,22 @@
     .conoce > article:nth-child(4){
         grid-area: 4 / 1 / 5 / 2;
     }
+    aside > ul:first-child{
+        margin-left: 40px;
+    }
+    aside > ul:last-child{
+        margin-right: 40px;
+    }
+    header > nav > h1{
+        margin-left: 40px;
+    }
+    header > nav > .menu{
+        margin-right: 40px;
+    }
+    .submenu{
+        right: 40px;
+    }
 }
-
 @media (max-width:1400px){
     .galeria{
         display: grid;
@@ -170,6 +184,7 @@
         margin: auto;
         font-size: 14px;
     }
+    
 }
 @media (max-width:1400px){
 

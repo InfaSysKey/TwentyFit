@@ -42,10 +42,12 @@ aside{
     flex-direction: row;
     justify-content: space-between;
 }
-aside > ul:first-child, 
+
+aside > ul:first-child{
+    margin-left: 225px;
+}
 aside > ul:last-child{
     margin-right: 225px;
-    margin-left: 225px;
 }
 
 /* Primer hijo */
@@ -80,11 +82,12 @@ aside > ul:last-child > li > a{
 /* Cabecera de la pagina */
 header{
     background-color: #f2f2f2;
-    background-image: url("../Img/foto.jpg"), url("../Img/foto2.jpg"), url("../Img/foto.jpg");
+    background-image: url("../Img/foto.jpg")/*, url("../Img/foto2.jpg"), url("../Img/foto.jpg")*/;
     /* background-position: 0vw 0vh, 100vw 0vh, 100vw 0vh; */
     background-repeat: no-repeat;
     background-size: cover;
-    animation: anim 10s linear infinite;
+    background-position: center center;
+    /* animation: anim 10s linear infinite; */
     height: 100vh;
     padding-top: 5vh;
     z-index: -1;
@@ -92,11 +95,11 @@ header{
     clip-path: polygon(0 0, 100% 0, 99.9% 85%, 50% 99.9%, 0 85%);
 }
 .selector{
+    grid-area: 4 / 1 / 5 / 2;
+    margin: auto;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    height: 220px;
+    
 }
 .selector > span{
     background-color: rgba(255, 255, 255, 0);
@@ -106,7 +109,7 @@ header{
     height: 15px;
     margin: 5px;
 }
-.selector > span:nth-last-of-type(2){animation: sel 10s linear infinite}
+/* .selector > span:nth-last-of-type(2){animation: sel 10s linear infinite}
 .selector > span:nth-last-of-type(1){animation: sel 10s linear 5s infinite}
 @keyframes anim{
     from{background-position: 0vw 0vh, 100vw 0vh, 100vw 0vh}
@@ -123,7 +126,7 @@ header{
 
     50%{background-color: rgba(255, 255, 255, 0);}
     to{background-color: rgba(255, 255, 255, 0);}
-}
+} */
 
 header > nav > h1{
     margin-left: 230px;
@@ -152,8 +155,6 @@ nav > h1 > a > img{
     width: 180px ;
     height: 100px;
 }
-
-
 .menu {
     display: flex;
     flex-direction: row ;
@@ -217,6 +218,7 @@ nav > h1 > a > img{
     border-radius: 4px;
     background-color: #f7931e;
 }
+
 /* Menu deplegable */
 .menu > li:last-child{
     display: block;
@@ -269,7 +271,6 @@ nav > h1 > a > img{
     visibility: hidden;
     opacity: 0;
     transition: all 0.3s ease 0s;
-    
 }
 .submenu > li:first-child,
 .submenu > li:nth-child(2),
@@ -310,19 +311,26 @@ nav > h1 > a > img{
 
 
 /* Carrusel  */
-
+.carrusel{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr repeat(3, 0.5fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-top: 100px;
+    height: auto;
+}
 .carrusel > #firstExp{
-    margin-left: 85px;
+    margin: 0 auto;
 }
 .carrusel > #firstExp > h1{
+    grid-area: 1 / 1 / 2 / 2;
     font-family: 'Volkorn 900 Italic';
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
     font-size: 90px;
     text-transform: uppercase;
-    width: 1000px;
     color: white;
     text-align: right;
-    margin-top: 150px;
     line-height: 1;
 }
 .carrusel > #firstExp > h1 > span:first-child::before,
@@ -342,12 +350,8 @@ nav > h1 > a > img{
     text-align: right;
 }
 #app21{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    margin-top: 20px;
+    margin: auto;
+    grid-area: 2 / 1 / 3 / 2;
 }
 #app21 > h1{
     text-align: center;
@@ -376,9 +380,8 @@ nav > h1 > a > img{
 /* Flechas */
 
 .elemento {
-    display: flex;
-    justify-content: center;
-    height: 10px;
+    margin: 0 auto;
+    grid-area: 3 / 1 / 4 / 2;
 }
 .animatedColor {
     color: white;
@@ -430,6 +433,11 @@ nav > h1 > a > img{
       transform: translate(0px, 50px);
     }
 }
+
+
+
+
+
 
 
 
