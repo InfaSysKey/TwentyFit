@@ -566,8 +566,7 @@ nav > h1 > a > img{
     text-transform: uppercase;
     text-align: center;
     line-height: 28px;
-    padding-bottom: 20px;
-    
+    padding-bottom: 20px; 
 }
 .blog > div > p > span::before{
     content: '\A'; 
