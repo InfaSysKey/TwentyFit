@@ -107,7 +107,8 @@
     nav > .menu{
         margin-right: 40px;
     }
-    .submenu{
+    .submenu,
+    .sstickymenu{
         right: 40px;
     }
 }
@@ -262,15 +263,34 @@
     #app21 > h1{
         font-size: 14px;
     }
-    aside{
+    .redes{
         visibility: hidden;
     }
     nav{
         visibility: hidden;
         display: none;
     }
+    .off-canvas > h1 > a > img{
+        width: 90px ;
+        height: 50px;
+    }
     .off-canvas{
         visibility: visible;
+        opacity: 1;
+        width: 100%;
+	    overflow: hidden;
+        top: 0;
+        background: black;
+        z-index: 4;
+    }
+    .off-canvas > .menu{
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+    }
+    .off-canvas > span{
+        visibility: visible;
+        opacity: 1;
     }
 }
 

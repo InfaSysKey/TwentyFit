@@ -79,14 +79,25 @@ body{
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
 .off-canvas{
+    position: fixed;
     display: flex;
-    z-index: 3;
+    z-index: 1;
     visibility: hidden;
+    opacity: 0;
     width: 100%;
-    position: absolute;
     background: #f6a219;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    height: 10%;
+}
+.off-canvas > span{
+    visibility: hidden;
+    opacity: 0;
+    color: white;
+    font-size: 30px;
+    cursor:pointer
 }
 /* Cabecera de la pagina */
 header{
@@ -242,7 +253,43 @@ nav > h1 > a > img{
     z-index: 4;
 }
 .stickymenu{
-    top: -80px;
+    top: 110px;
+    text-align: center;
+    width: 250px;
+    right: 220px;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+}
+.stickymenu > li:first-child,
+.stickymenu > li:nth-child(2),
+.stickymenu > li:nth-child(3),
+.stickymenu > li:nth-child(4){
+    border-bottom: 1px solid rgb(255, 150, 0);
+}
+.stickymenu > li:first-child{
+    border-radius: 5px 5px 0px 0px;
+}
+
+.stickymenu > li:last-child{
+    border-radius: 0px 0px 5px 5px;
+}
+.stickymenu > li{
+    background-color: #f6a219;
+    padding: 10px; 
+}
+.stickymenu > li > a{
+    color: white;
+}
+
+.stickymenu > li:hover,
+.stickymenu > li:focus {
+    background-color: rgb(255, 60, 0);
+}
+.menu > li:last-child:hover .stickymenu{
+    visibility: visible;
+    opacity: 1;
 }
 
 /* Menu deplegable */

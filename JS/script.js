@@ -1,40 +1,50 @@
-//Load pagina
-$(window).load(function() {
-    $(".cargador").fadeOut("slow");
-});
 
-//Sscroll menú
 window.onscroll = () => {menu()};
-window.addEventListener('load', () =>{
-    $(this).scrollTop(0);
-});
+//Tareas al recargar la página
+$(window).load( tareasLoad() );
+quitarTexto();
 
-let textoClaseUl = document.querySelectorAll("aside > ul:first-child > li > a");
-let vacio = "";
-//  console.log(textoClaseUl);
-for (let index = 0; index < textoClaseUl.length; index++) {
-    textoClaseUl[index].firstChild.textContent = "";
+
+function tareasLoad() {
+    $(".cargador").fadeOut("slow"); //Imagen de carga
+    $(this).scrollTop(0); //Que empiece desde la parte superior
 }
-// console.log(textoClaseUl);
-
-let textoH1 = document.querySelectorAll("nav > h1 > a")[0];
-let textoH1CAnvas = document.querySelectorAll(".off-canvas > h1 > a")[0];
-
-// console.log(textoH1);
-textoH1CAnvas.firstChild.textContent = "";
-textoH1.firstChild.textContent = "";
- 
+function quitarTexto() {
+    let textoClaseUl = document.querySelectorAll("aside > ul:first-child > li > a");
+    let textoH1 = document.querySelectorAll("nav > h1 > a")[0];
+    let textoH1CAnvas = document.querySelectorAll(".off-canvas > h1 > a")[0];
+    for (let index = 0; index < textoClaseUl.length; index++) {
+        textoClaseUl[index].firstChild.textContent = "";
+    }
+    textoH1CAnvas.firstChild.textContent = "";
+    textoH1.firstChild.textContent = "";
+}
 function menu() {
     let navbar = document.querySelectorAll("nav")[0];
-    let nav_submenu = document.querySelectorAll(".submenu")[0];
+    let navSubmenu = document.querySelectorAll("nav .menu ul")[0];
+    console.log(navSubmenu);
+    
     let sticky = navbar.offsetTop;
-    console.log(nav_submenu);
-
     if (window.pageYOffset >= sticky) {
         navbar.classList.add("sticky");
-        nav_submenu.classList.add("stickymenu");
+        navSubmenu.classList.remove("submenu");
+        navSubmenu.classList.add("stickymenu");
     } else {
         navbar.classList.remove("sticky");
-        nav_submenu.classList.remove("stickymenu");
+        navSubmenu.classList.remove("stickymenu");
+        navSubmenu.classList.add("submenu");
+        // nav_submenu.classList.remove("stickymenu");
     }
 }
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+  
+  /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    document.body.style.backgroundColor = "white";
+  } 
