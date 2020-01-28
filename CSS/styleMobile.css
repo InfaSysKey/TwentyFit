@@ -10,7 +10,6 @@
     }
     .carrusel > #firstExp > h1{
         font-size: 60px;
-        width: 800px;
     }
     .carrusel > #firstExp > h1 > span:first-child{
         font-size: 60px;
@@ -82,7 +81,7 @@
         margin-left: auto;
         margin-right: auto;
         padding: 40px;
-        margin-bottom: 400px;
+        margin-bottom: 500px;
     }
     .conoce > h1{
         grid-area: 1 / 1 / 2 / 2;
@@ -96,16 +95,16 @@
     .conoce > article:nth-child(4){
         grid-area: 4 / 1 / 5 / 2;
     }
-    aside > ul:first-child{
+    .redes > ul:first-child{
         margin-left: 40px;
     }
-    aside > ul:last-child{
+    .redes > ul:last-child{
         margin-right: 40px;
     }
-    header > nav > h1{
+    nav > h1{
         margin-left: 40px;
     }
-    header > nav > .menu{
+    nav > .menu{
         margin-right: 40px;
     }
     .submenu{
@@ -186,10 +185,6 @@
     }
     
 }
-@media (max-width:1400px){
-
-}
-
 @media (max-width:800px){
     .galeria{
         display: grid;
@@ -252,3 +247,30 @@
         align-items: center;
     }
 }
+
+/* Menu hamburguesa */
+@media (max-width:900px){
+    .carrusel > #firstExp > h1{
+        font-size: 40px;
+    }
+    .carrusel > #firstExp > h1 > span:first-child{
+        font-size: 40px;
+    }
+    .carrusel > #firstExp > h1 > span:last-child{
+        font-size: 24px;
+    }
+    #app21 > h1{
+        font-size: 14px;
+    }
+    aside{
+        visibility: hidden;
+    }
+    nav{
+        visibility: hidden;
+        display: none;
+    }
+    .off-canvas{
+        visibility: visible;
+    }
+}
+

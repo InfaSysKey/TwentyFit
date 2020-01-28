@@ -32,7 +32,7 @@ body{
 }
 
 /* Redes sociales e idioma */
-aside{
+.redes{
     z-index: 1;
     position: absolute;
     width: 100%;
@@ -43,42 +43,51 @@ aside{
     justify-content: space-between;
 }
 
-aside > ul:first-child{
+.redes > ul:first-child{
     margin-left: 225px;
 }
-aside > ul:last-child{
+.redes > ul:last-child{
     margin-right: 225px;
 }
 
 /* Primer hijo */
-aside > ul:first-child{
+.redes > ul:first-child{
     display: flex;
     flex-direction: row;
     align-items: center;
     list-style:none;
 }
-aside > ul:first-child li{
+.redes > ul:first-child li{
     padding: 5px;
 }
-aside > ul:first-child > li > a > i{
+.redes > ul:first-child > li > a > i{
     color: white;
 }
 /* Segundo hijo */
-aside > ul:last-child{
+.redes > ul:last-child{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-aside > ul:last-child li{
+.redes > ul:last-child li{
     padding: 5px;
 }
-aside > ul:last-child > li > a{
+.redes > ul:last-child > li > a{
     color: white;
     font-family: 'Volkorn 700 Italic', serif;
     font-size: 18px;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
-
+.off-canvas{
+    display: flex;
+    z-index: 3;
+    visibility: hidden;
+    width: 100%;
+    position: absolute;
+    background: #f6a219;
+    flex-direction: row;
+    justify-content: space-between;
+}
 /* Cabecera de la pagina */
 header{
     background-color: #f2f2f2;
@@ -89,8 +98,8 @@ header{
     background-position: center center;
     /* animation: anim 10s linear infinite; */
     height: 100vh;
-    padding-top: 5vh;
     z-index: -1;
+    padding-top: 5vh;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
     clip-path: polygon(0 0, 100% 0, 99.9% 85%, 50% 99.9%, 0 85%);
 }
@@ -128,11 +137,11 @@ header{
     to{background-color: rgba(255, 255, 255, 0);}
 } */
 
-header > nav > h1{
+nav > h1{
     margin-left: 230px;
     text-align: center;
 }
-header > nav > .menu{
+nav > .menu{
     margin-right: 218px; /*293*/
 }
 .borde{
@@ -144,12 +153,17 @@ header > nav > .menu{
     background-color: #f7931e;
     z-index: 1;
 }
+
+/* Menu  */
 nav{
+    position: fixed;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 68px;
+    z-index: 1;
 }
 nav > h1 > a > img{
     width: 180px ;
@@ -218,6 +232,18 @@ nav > h1 > a > img{
     border-radius: 4px;
     background-color: #f7931e;
 }
+/* Sticky menu  */
+.sticky {
+    position: sticky;
+    width: 100%;
+	overflow: hidden;
+    top: 0;
+    background: black;
+    z-index: 4;
+}
+.stickymenu{
+    top: -80px;
+}
 
 /* Menu deplegable */
 .menu > li:last-child{
@@ -267,7 +293,7 @@ nav > h1 > a > img{
     width: 250px;
     margin-top: 20px;
     right: 230px;
-    position: absolute;
+    position: fixed;
     visibility: hidden;
     opacity: 0;
     transition: all 0.3s ease 0s;
@@ -317,7 +343,7 @@ nav > h1 > a > img{
     grid-template-rows: 1fr repeat(3, 0.5fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    margin-top: 100px;
+    margin-top: 200px;
     height: auto;
 }
 .carrusel > #firstExp{
@@ -691,7 +717,7 @@ nav > h1 > a > img{
     background-color: darkgoldenrod;
 }
 .galeria > a{
-    height: 480px;
+    height: 390px;
 }
 .galeria img{
     width: 100%;
