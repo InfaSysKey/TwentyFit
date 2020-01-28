@@ -52,6 +52,7 @@
     #a002 > div p:first-child,
     #a003 > div p:first-child{
         font-size: 14px;
+        padding-bottom: 10px;
     }
     #a001 > div > p:last-child,
     #a002 > div p:last-child,
@@ -62,6 +63,11 @@
     #a002 > div a,
     #a003 > div a{
         font-size: 16px;
+    }
+    #a001 > div ,
+    #a002 > div ,
+    #a003 > div {
+        line-height: 16px;
     }
     
 }
@@ -76,7 +82,7 @@
         margin-left: auto;
         margin-right: auto;
         padding: 40px;
-        margin-bottom: 200px;
+        margin-bottom: 550px;
     }
     .conoce > h1{
         grid-area: 1 / 1 / 2 / 2;
@@ -197,5 +203,37 @@
     }
     .galeria > a:nth-child(7){
         grid-area: 7 / 1 / 8 / 2;
+    }
+    footer{
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        padding: 20px;
+    }
+    footer > h1{
+        grid-area: 1 / 1 / 2 / 2;
+        margin:auto;
+    }
+    footer > div:nth-child(2){
+        grid-area: 2 / 1 / 3 / 2;
+        text-align: center;
+    }
+    footer > div:nth-child(3){
+        grid-area: 3 / 1 / 4 / 2;
+        text-align: center;
+    }
+    footer > div:nth-child(4){
+        grid-area: 4 / 1 / 5 / 2;
+        text-align: center;
+    }
+    footer > p{
+        grid-area: 5 / 1 / 6 / 2;
+        margin:auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
