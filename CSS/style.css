@@ -85,7 +85,6 @@ body{
     visibility: hidden;
     opacity: 0;
     width: 100%;
-    background: #f6a219;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -99,6 +98,64 @@ body{
     font-size: 30px;
     cursor:pointer
 }
+.off-canvas > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.sidenav{
+    height: 100%;
+    width: 40%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -100%;
+    background: -moz-linear-gradient(45deg, #191919 0%, #222222 100%);
+    background: linear-gradient(45deg, #191919 0%, #222222 100%);
+    overflow: hidden;
+    transition: 0.8s;
+    padding-top: 60px;
+}
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 45px;
+    color: white;
+}
+.closebtn:hover,
+.closebtn:focus{
+    transition: 0.3s;
+    color: orange;
+
+}
+.sidenav > .menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.off-canvas > div > button{
+    background-color: transparent;
+    border-color: transparent;
+}
+.icon{
+    background-color: white;
+    width: 30px;
+    height: 4px;
+    transition: .3s all ease;
+    display: block;
+}
+.icon + .icon{
+    margin-top: 6px;
+}
+
 /* Cabecera de la pagina */
 header{
     background-color: #f2f2f2;
@@ -245,12 +302,13 @@ nav > h1 > a > img{
 }
 /* Sticky menu  */
 .sticky {
-    position: sticky;
+    position: fixed;
     width: 100%;
 	overflow: hidden;
     top: 0;
     background: black;
     z-index: 4;
+    margin-top: 0;
 }
 .stickymenu{
     top: 110px;
@@ -291,6 +349,7 @@ nav > h1 > a > img{
     visibility: visible;
     opacity: 1;
 }
+
 
 /* Menu deplegable */
 .menu > li:last-child{
