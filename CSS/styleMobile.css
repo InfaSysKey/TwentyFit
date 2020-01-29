@@ -2,15 +2,14 @@
 /* Primera logitud de responsive */
 @media(max-width:1470px){
     .menu > li a{
-        font-size: 18px;
+        font-size: 15px;
     }
     nav > h1 > a > img{
-        width: 140px ;
-        height: 80px;
+        width: 130px ;
+        height: 70px;
     }
     .carrusel > #firstExp > h1{
         font-size: 60px;
-        width: 800px;
     }
     .carrusel > #firstExp > h1 > span:first-child{
         font-size: 60px;
@@ -71,7 +70,7 @@
     }
     
 }
-@media(max-width:1030px){
+@media(max-width:1235px){
     .conoce{
         height: 100vh;
         display: grid;
@@ -82,7 +81,7 @@
         margin-left: auto;
         margin-right: auto;
         padding: 40px;
-        margin-bottom: 550px;
+        margin-bottom: 500px;
     }
     .conoce > h1{
         grid-area: 1 / 1 / 2 / 2;
@@ -96,8 +95,23 @@
     .conoce > article:nth-child(4){
         grid-area: 4 / 1 / 5 / 2;
     }
+    .redes > ul:first-child{
+        margin-left: 40px;
+    }
+    .redes > ul:last-child{
+        margin-right: 40px;
+    }
+    nav > h1{
+        margin-left: 40px;
+    }
+    nav > .menu{
+        margin-right: 40px;
+    }
+    .submenu,
+    .sstickymenu{
+        right: 40px;
+    }
 }
-
 @media (max-width:1400px){
     .galeria{
         display: grid;
@@ -170,11 +184,8 @@
         margin: auto;
         font-size: 14px;
     }
+    
 }
-@media (max-width:1400px){
-
-}
-
 @media (max-width:800px){
     .galeria{
         display: grid;
@@ -237,3 +248,50 @@
         align-items: center;
     }
 }
+
+/* Menu hamburguesa */
+@media (max-width:900px){
+    .carrusel > #firstExp > h1{
+        font-size: 40px;
+    }
+    .carrusel > #firstExp > h1 > span:first-child{
+        font-size: 40px;
+    }
+    .carrusel > #firstExp > h1 > span:last-child{
+        font-size: 24px;
+    }
+    #app21 > h1{
+        font-size: 14px;
+    }
+    .redes{
+        visibility: hidden;
+    }
+    nav{
+        visibility: hidden;
+        display: none;
+    }
+    .off-canvas > h1 > a > img{
+        width: 90px ;
+        height: 50px;
+    }
+    .off-canvas{
+        visibility: visible;
+        opacity: 1;
+        width: 100%;
+	    overflow: hidden;
+        top: 0;
+        background: -moz-linear-gradient(45deg, #191919 0%, #222222 100%);
+        background: linear-gradient(45deg, #191919 0%, #222222 100%);
+        z-index: 4;
+    }
+    .off-canvas > .menu{
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+    }
+    .off-canvas > span{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
