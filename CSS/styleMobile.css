@@ -75,13 +75,12 @@
         height: 100vh;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr repeat(3, 2fr);
+        grid-template-rows: repeat(2, 1fr) 2fr;
         grid-column-gap: 0px;
         grid-row-gap: 80px;
         margin-left: auto;
         margin-right: auto;
         padding: 40px;
-        margin-bottom: 500px;
     }
     .conoce > h1{
         grid-area: 1 / 1 / 2 / 2;
@@ -187,6 +186,9 @@
     
 }
 @media (max-width:800px){
+    .conoce{
+        margin-bottom: 450px;
+    }
     .galeria{
         display: grid;
         grid-template-columns: 1fr;
@@ -251,6 +253,15 @@
 
 /* Menu hamburguesa */
 @media (max-width:900px){
+    .carrusel{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr repeat(3, 0.9fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 50px;
+        margin-top: 200px;
+        height: auto;
+    }
     .carrusel > #firstExp > h1{
         font-size: 40px;
     }
@@ -270,7 +281,7 @@
         visibility: hidden;
         display: none;
     }
-    .off-canvas > h1 > a > img{
+    .off-canvas > div > h1 > a > img{
         width: 90px ;
         height: 50px;
     }
@@ -296,3 +307,63 @@
     }
 }
 
+@media (max-width:700px){
+    .carrusel{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr repeat(3, 0.9fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 100px;
+        margin-top: 200px;
+        height: auto;
+    }
+    .carrusel > #firstExp > h1{
+        font-size: 20px;
+    }
+    .carrusel > #firstExp > h1 > span:first-child{
+        font-size:20px;
+    }
+    .carrusel > #firstExp > h1 > span:last-child{
+        font-size: 22px;
+    }
+    #app21 > h1{
+        font-size: 12px;
+    }
+    /* Footer */
+    footer > h1 > img{
+        margin:auto;
+        width: 120px;
+        height: 80px;
+    }
+    footer > div:nth-child(2) > h2{
+        font-size: 18px;
+    }
+    footer > div:nth-child(2) > p{
+        font-size: 12px;
+    }
+    footer > div:nth-child(3) > h2{
+        font-size: 18px;
+    }
+    footer > div:nth-child(3) > dl{
+        font-size: 10px;
+    }
+    footer > div:nth-child(4) > ul > li{
+        font-size: 12px;
+    }
+    footer > p{
+        margin:auto;
+        font-size: 12px;
+    }
+    .galeria > h1  a{
+        font-size: 30px;
+    }
+    .gra{
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 350px){
+    .conoce{
+        margin-bottom: 650px;
+    }
+}
