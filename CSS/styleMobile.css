@@ -311,10 +311,10 @@
     .carrusel{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr repeat(3, 0.9fr);
+        grid-template-rows: 1fr repeat(3, 0.8fr);
         grid-column-gap: 0px;
-        grid-row-gap: 100px;
-        margin-top: 200px;
+        grid-row-gap: 70px;
+        margin-top: 150px;
         height: auto;
     }
     .carrusel > #firstExp > h1{
