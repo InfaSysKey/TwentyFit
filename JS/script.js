@@ -4,14 +4,12 @@ let sticky = navbar.offsetTop;
 
 window.onscroll = () => {menu()};
 //Tareas al recargar la página
-$(window).load( tareasLoad() );
+$(window).on('load' , function() {
+     $(".cargador").fadeOut("slow"); //Imagen de carga
+     $(this).scrollTop(0); //Que empiece desde la parte superior
+});
 quitarTexto();
 
-
-function tareasLoad() {
-    $(".cargador").fadeOut("slow"); //Imagen de carga
-    $(this).scrollTop(0); //Que empiece desde la parte superior
-}
 function quitarTexto() {
     let textoClaseUl = document.querySelectorAll("aside > ul:first-child > li > a");
     let textoH1 = document.querySelectorAll("nav > h1 > a")[0];
