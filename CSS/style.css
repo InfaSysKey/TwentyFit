@@ -80,7 +80,7 @@ body{
 }
 .off-canvas{
     position: fixed;
-    display: flex;
+    display: none;
     z-index: 1;
     visibility: hidden;
     opacity: 0;

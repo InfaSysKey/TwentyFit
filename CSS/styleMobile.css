@@ -275,6 +275,7 @@
         height: 50px;
     }
     .off-canvas{
+        display: flex;
         visibility: visible;
         opacity: 1;
         width: 100%;
