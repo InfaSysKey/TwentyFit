@@ -72,10 +72,9 @@
 }
 @media(max-width:1235px){
     .conoce{
-        height: 100vh;
+        height: 100%;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr) 2fr;
         grid-column-gap: 0px;
         grid-row-gap: 80px;
         margin-left: auto;
@@ -253,15 +252,7 @@
 
 /* Menu hamburguesa */
 @media (max-width:900px){
-    .carrusel{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr repeat(3, 0.9fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 50px;
-        margin-top: 200px;
-        height: auto;
-    }
+
     .carrusel > #firstExp > h1{
         font-size: 40px;
     }
@@ -311,11 +302,9 @@
     .carrusel{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr repeat(3, 0.8fr);
+        grid-template-rows: 1fr repeat(3, 1fr);
         grid-column-gap: 0px;
-        grid-row-gap: 70px;
-        margin-top: 150px;
-        height: auto;
+        height: 100vw;
     }
     .carrusel > #firstExp > h1{
         font-size: 20px;
@@ -362,8 +351,8 @@
     }
 }
 
-@media (max-width: 350px){
+/* @media (max-width: 350px){
     .conoce{
         margin-bottom: 650px;
     }
-}
+} */
